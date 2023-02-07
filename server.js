@@ -5,8 +5,15 @@ let express = require('express');
 let app = express();
 
 //Launch app to listen to specific port
+const http = require("http");
+const host = 'localhost';
 const port = 8000;
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-  })
-  
+
+const requestListener = function (req, res) {    
+    res.writeHead(200);    
+    res.end("Hii!");
+};
+const server = http.createServer(requestListener);
+server.listen(port, host, () => {    
+    console.log(`Server is running on http://${host}:${port}`);
+});
