@@ -1,0 +1,23 @@
+{
+  "name": "exerciceecamair",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chachamottaki/ExerciceEcamAir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chachamottaki/ExerciceEcamAir/issues"
+  },
+  "homepage": "https://github.com/chachamottaki/ExerciceEcamAir#readme",
+  "description": "",
+  "dependencies": {
+    "express-ejs": "^2.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
