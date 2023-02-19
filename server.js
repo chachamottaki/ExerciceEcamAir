@@ -10,9 +10,14 @@ let app = express();
 //render ejs pages
 app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
-    res.render('reservation');
- });
- 
+    const data = {
+      title: 'EcamAir',
+      heading: 'Réservation',
+      content: 'Destination: Barcelone'
+    };
+    res.render('template', data);
+  });
+  
 //serve up static files (css)
  app.use('/public', express.static('public'));
 
