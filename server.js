@@ -4,16 +4,14 @@ let express = require('express');
 //Initialize the app
 let app = express();
 
-//Launch app to listen to specific port
-const http = require("http");
-const host = 'localhost';
-const port = 8000;
+//Send message for default URL
+app.get('/', (request, response) => response.send('Hello world !'));
 
-const requestListener = function (req, res) {    
-    res.writeHead(200);    
-    res.end("Hii!");
-};
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {    
-    console.log(`Server is running on http://${host}:${port}`);
+//Setup server post
+let port = 8000;
+
+//Launch app to listen to specified port
+app.listen(port, function() {
+    console.log('Server running on port' + port)
 });
+
