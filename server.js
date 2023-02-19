@@ -9,15 +9,23 @@ let app = express();
 
 //render ejs pages
 app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
     const data = {
       title: 'EcamAir',
       heading: 'Réservation',
-      content: 'Destination: Barcelone'
+      content: '',
+      field1: 'Destination',
+      field2: 'Nombre de places',
+      field3: 'Assurances',
+      field4:'Total de la réservation:',
+      formbtn: 'Etape suivante',
+      bodybtn:'Calculer le total'
     };
     res.render('template', data);
   });
-  
+
+
 //serve up static files (css)
  app.use('/public', express.static('public'));
 

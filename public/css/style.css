@@ -18,5 +18,15 @@ form {
     width: 400px;
     padding:10px;
     margin: 10px;
+    
+}
 
+label, input{
+    
+    margin: 10px;
+    vertical-align: middle;
+}
+
+button {
+    margin: 10px;
 }
