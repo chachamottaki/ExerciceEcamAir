@@ -1,0 +1,16 @@
+/* styles.css */
+
+body {
+    width:500px;
+    height:300px;
+    font-family: Arial;
+    font-size: 12px;
+    border: 1px solid black;
+    padding:10px;
+    margin: 10px;
+    background-color: lightblue;
+    /* background-color: lightblue; */
+
+  }
+  
+  
