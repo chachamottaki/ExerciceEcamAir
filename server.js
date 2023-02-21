@@ -4,29 +4,23 @@ let express = require('express');
 //Initialize the app
 let app = express();
 
-//Send message for default URL
-// app.get('/', (request, response) => response.send('Hello world !'));
 
 //render ejs pages
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    const data = {
-      title: 'EcamAir',
-      heading: 'Réservation',
-      content: '',
-      field1: 'Destination',
-      field2: 'Nombre de places',
-      field3: 'Assurances',
-      field4:'Total de la réservation:',
-      formbtn: 'Etape suivante',
-      bodybtn:'Calculer le total'
-    };
-    res.render('template', data);
-  });
+// app.get('/', (req, res) => {
+//     res.render('reservation');
+//   });
+
+//   app.post('/', (req, res) => {
+//     res.render('encode');
+//   });
+
+let router = require('./routes');
+app.use('/', router);
 
 
-//serve up static files (css)
+// serve up static files (css)
  app.use('/public', express.static('public'));
 
 //Setup server post
