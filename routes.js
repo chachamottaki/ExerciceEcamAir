@@ -8,6 +8,6 @@ var reservationController = require('./controllers/reservationController');
 router.get('/',reservationController.addOrder);
 router.post('/encode', reservationController.encode);
 router.post('/validation', reservationController.validate);
-router.get('/confirmation', reservationController.confirm);
+router.post('/confirmation', reservationController.confirm);
 
 module.exports = router;

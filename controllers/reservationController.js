@@ -2,10 +2,11 @@
 let order = require("../models/reservationModel");
 
 exports.addOrder = function(req,res){
-    let order1 = new Reservation();
+    //let order1 = new Reservation();
     res.render('reservation.ejs');
 }
 exports.encode = function(req,res){
+ 
     res.render('encode.ejs');
 }
 exports.validate = function(req,res){
