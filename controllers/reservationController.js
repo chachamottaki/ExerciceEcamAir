@@ -10,9 +10,14 @@ exports.encode = function(req,res){
     let destination = req.body.destination; //get req.body. ... value in .ejs : name= ...
     let amount = req.body.amount;
     let insurance = req.body.insurance;
-    let price = req.body.totalPrice;
 
-    let reservation = new order(destination, amount, insurance, price);
+    if (insurance == 'on') {
+        totalPrice = (amount * 45) + 20 ;
+    } else {
+        totalPrice = amount * 45;
+    }
+
+    let reservation = new order(destination, amount, insurance, totalPrice);
     reservationList.push(reservation);
     console.log(reservationList);
 
