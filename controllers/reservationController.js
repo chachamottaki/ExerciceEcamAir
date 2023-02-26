@@ -23,9 +23,7 @@ exports.encode = function(req,res){
 
     res.render('encode.ejs');
 }
-exports.validate = function(req,res){
-    res.render('validation.ejs');
-}
+
 exports.confirm = function(req,res){
     res.render('confirmation.ejs');
 }
