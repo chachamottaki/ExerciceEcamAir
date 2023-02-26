@@ -37,3 +37,15 @@ input{
 button {
     margin: 10px;
 }
+
+img {
+
+    width: 350px;
+  
+  }
+
+  div {
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+  }
