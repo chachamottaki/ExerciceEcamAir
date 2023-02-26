@@ -10,9 +10,10 @@ exports.validate = function(req,res){
     console.log(traveler);
 
     const amount = req.session.amount;
+    const destination = req.session.destination;
     const travelersList = req.session.traveler;
     // console.log(travelersList.name);
     // console.log(travelersList.name[0]);
 
-    res.render('validation.ejs', {n: amount, travelersList : travelersList});
+    res.render('validation.ejs', {destination: destination,n: amount, travelersList : travelersList});
 }

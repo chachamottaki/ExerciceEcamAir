@@ -9,6 +9,6 @@ var travelerController = require('./controllers/travelerController');
 router.get('/',reservationController.addOrder);
 router.post('/encode', reservationController.encode);
 router.post('/validation',travelerController.validate);
-router.post('/confirmation', reservationController.confirm);
+router.get('/confirmation', reservationController.confirm);
 
 module.exports = router;

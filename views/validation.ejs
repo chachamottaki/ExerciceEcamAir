@@ -6,10 +6,9 @@
 </head>
 <body>
    <h1>Validation des réservation</h1>
-   <form method="POST" action="/confirmation">
-      <br>
-      <label>Liste des passagers</label>
-      <br>
+   
+      <h2>Destination : <%= destination %></h2>
+      <h2>Liste des passagers</h2>
       <ul>
          <% 
             if(n == 1){%>
@@ -23,9 +22,9 @@
             
       </ul>
       <br>
-      <button type="submit">Etape suivante</button>
+      <button onClick="window.location.href='/confirmation';">Etape suivante</button>
       <button action="/" onClick="window.location.href='/';">Annuler la réservation</button>
-    </form>
+   
 
 </body>
 </html>
