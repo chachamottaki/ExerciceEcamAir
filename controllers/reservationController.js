@@ -21,7 +21,7 @@ exports.encode = function(req,res){
     reservationList.push(reservation);
     console.log(reservationList);
 
-    res.render('encode.ejs');
+    res.render('encode.ejs', {n : amount});
 }
 
 exports.confirm = function(req,res){
