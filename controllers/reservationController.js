@@ -19,6 +19,8 @@ exports.encode = function(req,res){
 
     let reservation = new order(destination, amount, insurance, totalPrice);
     reservationList.push(reservation);
+
+    req.session.amount = amount;
     console.log(reservationList);
 
     res.render('encode.ejs', {n : amount});
@@ -27,4 +29,3 @@ exports.encode = function(req,res){
 exports.confirm = function(req,res){
     res.render('confirmation.ejs');
 }
-

@@ -11,7 +11,16 @@
       <label>Liste des passagers</label>
       <br>
       <ul>
-        
+         <% 
+            if(n == 1){%>
+               <li><%= travelersList.name %> <%= travelersList.age %> ans </li>
+            <% } 
+            else{
+               for (let i = 0; i < n; i++) { %>
+                  <li><%= travelersList.name[i] %> <%= travelersList.age[i] %> ans </li>
+              <% } 
+            } %>
+            
       </ul>
       <br>
       <button type="submit">Etape suivante</button>
