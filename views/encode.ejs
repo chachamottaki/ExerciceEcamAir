@@ -9,16 +9,11 @@
    <form method="POST" action="/validation">
     
     <% for (let i = 0; i < n; i++) { %>
-        <p><label>Nom :</label> <input type="text" name="name" id="name"/>
-        </p>
-        <p><label>Age : </label> <input type="number" name="age" id="age"/>
-        </p>
+      <label>Nom :</label><input type="text" name="name" id="name"/><br/>
+      <label>Age : </label><input type="number" name="age" id="age"/><br/>
+      
     <% } %>
     
-      <button type="submit">Etape suivante</button>
-    </form>
-      <button action="/" onClick="window.location.href='/';">Annuler la réservation</button>   
-    <br>
-
+      <button type="submit">Etape suivante</button></form> <button onClick="window.location.href='/';">Annuler la réservation</button> 
 </body>
 </html>
