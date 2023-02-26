@@ -14,6 +14,7 @@ exports.encode = function(req,res){
     if (insurance == 'on') {
         totalPrice = (amount * 45) + 20 ;
     } else {
+        insurance = 'off';
         totalPrice = amount * 45;
     }
 
