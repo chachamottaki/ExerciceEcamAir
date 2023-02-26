@@ -7,14 +7,14 @@
 <body>
    <h1>Réservation</h1>
    <form method="POST" action="/encode">
-      <label for="destination">Destination:</label>
-      <input type="text" required>
+      <label>Destination:</label>
+      <input type="text" name="destination" id="destination" required>
       <br>
       <label for="amount">Nombre de places:</label>
-      <input type="text" id = "amount" required>
+      <input type="number" name="amount" id = "amount" required>
       <br>
       <label for="insurance">Assurances</label>
-      <input type="checkbox" id = "insurance">
+      <input type="checkbox" name = "insurance" id = "insurance">
       <br>
       <button type="submit">Etape suivante</button>
     </form>
@@ -30,13 +30,14 @@
               totalPrice = amount * 45;
           }
   
-          document.getElementById("result").innerHTML = totalPrice;
+          document.getElementById("totalPrice").innerHTML = totalPrice;
+          return totalPrice;
           }
       </script>
 
       <button type="submit" onclick="getPrice()">Calculer le total</button>
       <br>
-      <label>Total de la réservation: <span id="result"></span></label>
+      <label>Total de la réservation: <output name = "totalPrice" id="totalPrice"></output></label>
     
 </body>
 </html>
