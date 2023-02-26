@@ -20,9 +20,17 @@ exports.encode = function(req,res){
     let reservation = new order(destination, amount, insurance, totalPrice);
     reservationList.push(reservation);
 
-    req.session.amount = amount;
     req.session.destination = destination;
-    console.log(reservationList);
+    req.session.amount = amount;
+    req.session.insurance = insurance;
+    req.session.totalPrice = totalPrice;
+
+    req.session.user = {
+        destination : req.session.destination,
+        amount: req.session.amount,
+        insurance: req.session.insurance,
+        totalPrice: req.session.totalPrice
+      };
 
     res.render('encode.ejs', {n : amount});
 }

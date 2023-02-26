@@ -12,11 +12,11 @@
       <ul>
          <% 
             if(n == 1){%>
-               <li><%= travelersList.name %> <%= travelersList.age %> ans </li>
+               <li><%= name %> <%= age %> ans </li>
             <% } 
             else{
                for (let i = 0; i < n; i++) { %>
-                  <li><%= travelersList.name[i] %> <%= travelersList.age[i] %> ans </li>
+                  <li><%= name[i] %> <%= age[i] %> ans </li>
               <% } 
             } %>
             

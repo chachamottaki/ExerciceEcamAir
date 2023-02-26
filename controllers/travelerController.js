@@ -7,13 +7,13 @@ exports.validate = function(req,res){
 
     let traveler = new Traveler(name,age);
     req.session.traveler = traveler;
-    console.log(traveler);
+    
+    req.session.user = {
+        ...req.session.user,
+        name: req.body.name,
+        age: req.body.age
+      };
+    let User = req.session.user;
 
-    const amount = req.session.amount;
-    const destination = req.session.destination;
-    const travelersList = req.session.traveler;
-    // console.log(travelersList.name);
-    // console.log(travelersList.name[0]);
-
-    res.render('validation.ejs', {destination: destination,n: amount, travelersList : travelersList});
+    res.render('validation.ejs', {destination: User.destination, n: User.amount, name:User.name, age: User.age});
 }
